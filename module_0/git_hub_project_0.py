@@ -4,12 +4,9 @@ import random
 def game_core_v2(number):
     '''Находим середину промежутка, создаем рандомное число и меняем границы нашего промежутка относительно переменной middle_range.
        Функция принимает загаданное число и возвращает число попыток'''
-    
     count = 1
     min_num = 1
     max_num = 100
-    
-    
     while True:         # бесконечный цикл
         count += 1
         middle_range = (min_num + max_num) // 2
@@ -22,7 +19,6 @@ def game_core_v2(number):
                 
             elif number < middle_range:
                 max_num = middle_range - 1          # если наше число меньше средней границы, сокращаем расстояние до верхней границы
-                
                 
         else:
             return(count)   # если число совпало с загаданным, возвращаем кол-во попыток
